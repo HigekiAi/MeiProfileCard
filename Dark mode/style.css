@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
+:root {
+    --background: #081C1F;
+    --red: #E43B37;
+    --yellow: #F7BC24;
+    --green: #68C74F;
+    --blue: #16B0DD;
+    --text: #B9E5EC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 24px;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Mali', cursive;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.card {
+    width: 25rem;
+    position: relative;
+    padding: 15px;
+    background-color: var(--background);
+    border: 3.5px solid var(--red);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow),
+    20px -20px 0 -3px var(--background), 20px -20px var(--green),
+    30px -30px 0 -3px var(--background), 30px -30px var(--blue);
+}
+
+.card:hover {
+    animation: shadow-wave 1s ease infinite;
+}
+  
+  
+@keyframes shadow-wave {
+    0% {
+        border: 3.5px solid var(--red);
+        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow),
+        20px -20px 0 -3px var(--background), 20px -20px var(--green),
+        30px -30px 0 -3px var(--background), 30px -30px var(--blue);
+    }
+    25% {
+        border: 3.5px solid var(--blue);
+        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--red),
+        20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -3px var(--background), 30px -30px var(--green);
+    }
+    50% {
+        border: 3.5px solid var(--green);
+        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--blue),
+        20px -20px 0 -3px var(--background), 20px -20px var(--red),
+        30px -30px 0 -3px var(--background), 30px -30px var(--yellow);
+    }
+    75% {
+        border: 3.5px solid var(--yellow);
+        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+        20px -20px 0 -3px var(--background), 20px -20px var(--blue),
+        30px -30px 0 -3px var(--background), 30px -30px var(--red);
+    }
+    100% {
+        border: 3.5px solid var(--red);
+        box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow),
+        20px -20px 0 -3px var(--background), 20px -20px var(--green),
+        30px -30px 0 -3px var(--background), 30px -30px var(--blue);
+    }
+}
+  
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card_image {
+    width: 30%;
+    float: left;
+    border-radius: 50%;
+    margin: 0.2rem 0.1rem;
+    overflow: hidden;
+}
+
+.card_content {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    font-size: 80%;
+}
+
+.user {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+i {
+    width: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.card_btnswitch {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.card_btnswitch:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 730px) {
+    html {
+        font-size: 20px;
+    }
+    .card_image {
+        width: 50%;
+        margin: 0 auto;
+        float: none;
+    }
+    .card {
+        width: 18rem;
+    }
+}
